@@ -16,16 +16,4 @@ spring:
         username: dbuser
         password: 123456
 
-server:
-  port: 80
-  tomcat:
-    threads:
-      max: 800
-      min-spare: 30
-    max-connections: 8192
-    max-http-form-post-size: 1024MB
-    uri-encoding: utf-8
-
-  servlet:
-    context-path: /
 

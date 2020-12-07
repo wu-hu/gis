@@ -67,9 +67,42 @@ mybatis:
 logging:
   level:
     root: info
-    org.springframework: warn
+    org.springframework: info
     com.jh: debug
+    org.apache.shiro: debug
+    org.springframework.web: debug
   config: classpath:log4j2/log4j2.xml
+
+server:
+  port: 80
+  tomcat:
+    threads:
+      max: 800
+      min-spare: 30
+    max-connections: 8192
+    max-http-form-post-size: 1024MB
+    uri-encoding: utf-8
+
+  servlet:
+    context-path: /
+
+
+shiro-redis:
+  enabled: true
+  redis-manager:
+    deploy-mode: standalone
+    host: 127.0.0.1:6379
+  session-dao:
+    expire: -2    # -1: 永不过期， -2：与session过期时间相同
+    session-in-memory-timeout: 1000
+    cache-manager:
+      expire: 1800
+
+shiro:
+  cookie:
+    cookieName: SHIROSESSIONID
+  session:
+    timeout: 3600
 
 
 

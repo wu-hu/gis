@@ -342,4 +342,8 @@ public class SysUser implements Serializable {
         sb.append("]");
         return sb.toString();
     }
+
+    public boolean isAdmin() {
+        return true;
+    }
 }

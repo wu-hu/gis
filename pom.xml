@@ -13,7 +13,12 @@
 	<properties>
 		<project.version>1.0.0</project.version>
 		<java.version>1.8</java.version>
+		<springboot.version>2.4.0</springboot.version>
+		<springcontext.version>5.3.1</springcontext.version>
 		<druid.version>1.2.3</druid.version>
+		<fastjson.version>1.2.75</fastjson.version>
+		<mybatis.version>2.1.4</mybatis.version>
+		<shiroredis.version>3.3.1</shiroredis.version>
 		<project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
 	</properties>
 
@@ -22,7 +27,7 @@
 			<dependency>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-starter-parent</artifactId>
-				<version>2.4.0</version>
+				<version>${springboot.version}</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
@@ -30,12 +35,27 @@
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-context</artifactId>
-				<version>5.3.1</version>
+				<version>${springcontext.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.crazycake</groupId>
+				<artifactId>shiro-redis-spring-boot-starter</artifactId>
+				<version>${shiroredis.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.mybatis.spring.boot</groupId>
+				<artifactId>mybatis-spring-boot-starter</artifactId>
+				<version>${mybatis.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.alibaba</groupId>
 				<artifactId>druid-spring-boot-starter</artifactId>
 				<version>${druid.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>fastjson</artifactId>
+				<version>${fastjson.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.jh</groupId>
